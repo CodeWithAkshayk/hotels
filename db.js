@@ -1,8 +1,9 @@
 const mongoose= require("mongoose");
+require('dotenv').config(); 
+// this is a wrong practice to add this dotenv file in the db file it should be in the Server.js file 
 
 // const mongoURL= "mongodb://127.0.0.1:27017/School";
-const mongoURL =process.env.MONGO_URL_ONLINE;
-
+const mongoURL=process.env.MONGO_URL;
 
 mongoose.connect(mongoURL,{
     useNewUrlParser: true,
